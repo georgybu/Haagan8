@@ -1,0 +1,90 @@
+<html lang="en">
+<head title="">
+    <meta charset="utf-8">
+    <title>סימולטור ההגנה 8</title>
+
+    <style>
+        body {
+            direction: rtl;
+        }
+
+        th {
+            position: inherit;
+            background-color: yellow;
+            width: 200px;
+            padding: 10px;
+            border: 1px solid navy;
+            margin: 0 0 0 0;
+            text-align: center;
+        }
+
+        #familiesTbl td {
+            position: inherit;
+            background-color: ghostwhite;
+            width: 200px;
+            padding: 10px;
+            border: 1px solid navy;
+            margin: 0 0 0 0;
+            text-align: center;
+        }
+
+        #buildingTbl {
+            display: none;
+        }
+
+        #buildingTbl td.family {
+            position: inherit;
+            background-color: lightblue;
+            width: 200px;
+            padding: 30px;
+            border: 2px solid navy;
+            margin: 0 0 0 0;
+        }
+
+        #buildingTbl td.contractor {
+            position: inherit;
+            background-color: red;
+            width: 200px;
+            padding: 30px;
+            border: 2px solid navy;
+            margin: 0 0 0 0;
+        }
+
+        table tr td {
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<table id="familiesTbl">
+    <thead>
+        <tr>
+            <th>משפחה</th>
+            <th>יש חניה?</th>
+            <th>מספר קומות אפשרי לקפיצה</th>
+            <th>קומה התחלתית</th>
+            <th>קומה לאחר קפיצה</th>
+            <th>מיקום אופקי בקומה</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+<input id="clickMe1" type="button" value="הצג מצב כיום" onclick="onShowInitTableClick()"/>
+<input id="clickMe2" type="button" value="הצג סימולציה לאחר הגדרות" onclick="onShowCalculatedTableClick();"/>
+<table id="buildingTbl" class="cinereousTable">
+    <tbody></tbody>
+    <tfoot>
+    <tr>
+        <td></td>
+        <td><b>דירה אחורית</b></td>
+        <td><b>דירה קדמית קטנה</b></td>
+        <td><b>דירה קדמית גדולה</b></td>
+    </tr>
+    </tfoot>
+</table>
+
+<script src="Haagan8.js"></script>
+</body>
+</html>
